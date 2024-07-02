@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GraspNet: A Comprehensive Hand-Object Grasp Dataset with All Grasping Taxonomies, Diverse Hand Poses and Shapes, and 3D Annotations</title>
+<meta charset="UTF-8">
+<meta name="description" content="DESCRIPTION META TAG">
+<meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+<meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+<meta property="og:url" content="URL OF THE WEBSITE"/>
+<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+<meta property="og:image" content="static/image/your_banner_image.png" />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+<meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+<meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Keywords for your paper to be indexed by-->
+<meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+rel="stylesheet">
+<link rel="stylesheet" href="static/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="static/css/bulma-slider.min.css">
+<link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script defer src="static/js/fontawesome.all.min.js"></script>
+<script src="static/js/bulma-carousel.min.js"></script>
+<script src="static/js/bulma-slider.min.js"></script>
+<script src="static/js/index.js"></script>
+
+<style>
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+h3 {
+  margin-bottom: 1rem;
+}
+h4 {
+  margin-bottom: 1rem;
+}
+video {
+  width: 100%;
+  height: 100%;
+}
+code {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+.container {
+  padding: 40px 15px;
+}
+.center {
+  text-align: center;
+}
+.underline {
+  text-decoration: underline;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.authors {
+  line-height: 2;
+  font-size: 18px;
+}
+.section {
+  padding: 10px 0 30px;
+}
+.content {
+  padding: 10px 0;
+}
+.video {
+  padding: 20px 0 20px;
+}
+.image{
+  padding: 0 30px;
+}
+.image-doc{
+  padding: 0 25px;
+}
+.embedded-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+.embedded-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="content">
+        <h2 class="center content">GraspNet: A Comprehensive Hand-Object Grasp Dataset with All Grasping Taxonomies, Diverse Hand Poses and Shapes, and 3D Annotations</h2>
+        <div class="center content authors">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Woojin Cho<sup>1</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://jyunlee.github.io/" target="_blank">
+            <span class="nowrap">Jihyun Lee<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Minjae Yi<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Minje Kim<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Taeyun Woo<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Donghwan Kim<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Taewook Ha<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Hyokeun Lee<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Je-Hwan Ryu<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" target="_blank">
+            <span class="nowrap">Woontack Woo<sup>?</sup></span>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://sites.google.com/view/tkkim/home" target="_blank">
+            <span class="nowrap">Tae-Kyun Kim<sup>?</sup></span>
+          </a>
+        </div>
+        <div class="center content authors">
+          <span><sup>1</sup>KAIST</span>
+        </div>
+        <div class="center authors">
+          <span>European Conference on Computer Vision (ECCV) 2024</span>
+        </div>
+      </div>
+
+      
+      <!--
+      <div class="video">
+        <video autoplay="autoplay" muted="muted" loop="loop">
+          <source src="assets/dex-ycb-render.mp4" type="video/mp4">
+        </video>
+      </div>
+    -->
+    <br>
+    <section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+            <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+                <img src="assets/thumbnails.jpg">
+            </div>
+            <div class="item item-video2">
+                <img src="assets/DataOrganization.png">
+            </div>
+            <div class="item item-video3">
+                <img src="assets/HardwareSetup.png">
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+      <div class="section">
+        <h3>Abstract</h3>
+        <p>Existing datasets for 3D hand-object interaction are limited either in the data cardinality, data variations in interaction scenarios, or the quality of annotations. In this work, we present a comprehensive new training dataset for hand-object interaction called GraspNet. It is the only real dataset that captures full grasp taxonomies, providing grasp annotation and wide intraclass variations. Using grasp taxonomies as atomic actions, their space and time combinatorial can represent complex hand activities around objects. We select 22 rigid objects from the YCB dataset and 8 other compound objects using shape and size taxonomies, ensuring coverage of all hand grasp configurations. The dataset includes diverse hand shapes from 99 participants aged 10 to 74, totaling 1.5M RGB-Depth frames. It offers labels for 3D hand and object meshes, 3D keypoints, contact maps, and \emph{grasp labels}. Accurate hand and object 3D meshes are obtained by fitting the hand parametric model (MANO) and the hand implicit function (HALO) to multi-view RGBD frames, with the MoCap system only for objects. Note that HALO fitting does not require any parameter tuning, enabling scalability to the dataset's size with comparable accuracy to MANO. We evaluate GraspNet on relevant tasks: grasp classification and 3D hand pose estimation. The result shows performance variations based on grasp type and object class, indicating the potential importance of the interaction space captured by our dataset. The provided data aims at learning universal shape priors or foundation models for 3D hand-object interaction.</p>
+      </div>
+
+      <div class="section">
+        <h3>Paper & Document</h3>
+        <div class="row content">
+          <div class="center image-doc">
+            <a href="./assets/chao_cvpr2021.pdf" target="_blank">
+              <img src="./assets/pdf.png" height="176px" width="136px">
+              <br>
+              <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
+              <span>PDF</span>
+            </a>
+          </div>
+          <div class="center image-doc">
+            <a href="./assets/chao_cvpr2021_supp.pdf" target="_blank">
+              <img src="./assets/supplementary.png" height="176px" width="136px">
+              <br>
+              <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
+              <span>Supplementary</span>
+            </a>
+          </div>
+          <div class="center image-doc">
+            <a href="https://arxiv.org/abs/2104.04631" target="_blank">
+              <img src="./assets/arxiv.png" height="176px" width="136px">
+              <br>
+              <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
+              <span>arXiv</span>
+            </a>
+          </div>
+          <div class="center">
+            <a href="https://cad.onshape.com/documents/ac141300e03f08f590fbeecb/w/ad063a3527ccd1a24d289e93/e/13380efe91e477d6c0872bdb" target="_blank">
+              <img src="./assets/cad.png" height="176px" width="136px">
+              <br>
+              <div style="width: 188px">
+                <span class="icon"> <i class="fas fa-file-alt"></i> </span>
+                <span>Studio CAD Model</span>
+              </div>
+            </a>
+          </div>
+          <div class="center">
+            <a href="https://docs.google.com/document/d/1bIB2AnTWlHNNe3clZrGfXYGn9XTN2JzYCer6eVQipBU" target="_blank">
+              <img src="./assets/hardware.png" height="176px" width="136px">
+              <br>
+              <div style="width: 188px">
+                <span class="icon"> <i class="fas fa-file-alt"></i> </span>
+                <span>Studio Hardware</span>
+              </div>
+            </a>
+          </div>
+          <div class="center">
+            <a href="https://docs.google.com/document/d/1jflhWGTn4lsGj5PiJ14Q37k0xHSnkTuDJvkdFr_j-fo" target="_blank">
+              <img src="./assets/realsense.png" height="176px" width="136px">
+              <br>
+              <div style="width: 188px">
+                <span class="icon"> <i class="fas fa-file-alt"></i> </span>
+                <span>RealSense Calibration & Recording Guide</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <br>
+
+      <div class="section">
+        <h3>Data</h3>
+        <p>DexYCB is licensed under <span class="underline"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>.</p>
+        <p>We provide two options for downloading the dataset:</p>
+        <ol>
+          <li>
+            <p>A single compressed file that contains everything:<a href="https://drive.google.com/file/d/18fD8RtWJM_fBi3bsuQTzdjIKxdRYtl57" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>dex-ycb-20210415.tar.gz</a> (119G). Download this file to a new folder and extract it with:</p>
+            <pre><code>tar zxvf dex-ycb-20210415.tar.gz</code></pre>
+          </li>
+          <li>
+            <p>A breakdown to multiple compressed files, each containing a sub-folder. Download all the files below to a new folder and extract them individually:</p>
+            <ul>
+              <li><a href="https://drive.google.com/file/d/1Ehh92wDE3CWAiKG7E9E73HjN2Xk2XfEk" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20200709-subject-01.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1Uo7MLqTbXEa-8s7YQZ3duugJ1nXFEo62" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20200813-subject-02.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1FkUxas8sv8UcVGgAzmSZlJw1eI5W5CXq" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20200820-subject-03.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/14up6qsTpvgEyqOQ5hir-QbjMB_dHfdpA" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20200903-subject-04.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1NBA_FPyGWOQF5-X9ueAat5g8lDMz-EmS" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20200908-subject-05.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1UWIN2-wOBZX2T0dkAi4ctAAW8KffkXMQ" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20200918-subject-06.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1oWEYD_o3PVh39pLzMlJcArkDtMj4nzI0" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20200928-subject-07.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1GTNZwhWbs7Mfez0krTgXwLPndvrw1Ztv" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20201002-subject-08.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1j0BLkaCjIuwjakmywKdOO9vynHTWR0UH" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20201015-subject-09.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1FvFlRfX-p5a5sAWoKEGc17zKJWwKaSB-" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>20201022-subject-10.tar.gz</a> (12G)</li>
+              <li><a href="https://drive.google.com/file/d/1CPqLjsaYNjE3xSJbuWmqaMsGvyGIxiKL" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>bop.tar.gz</a> (1.2G)</li>
+              <li><a href="https://drive.google.com/file/d/1UAwVKT4Rgb1fLcFoa1o71_-0NtSvvLAQ" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>calibration.tar.gz</a> (16K)</li>
+              <li><a href="https://drive.google.com/file/d/1cAzlQBpcTatI5ykYQ8ziQiHLUG_a_UpM" target="_blank"><span class="icon"> <i class="fas fa-download"></i> </span>models.tar.gz</a> (1.4G)</li>
+            </ul>
+          </li>
+        </ol>
+        <p>Once you successfully download and extract the dataset, you should have a folder with the following structure:</p>
+        <pre><code>├── 20200709-subject-01/
+├── 20200813-subject-02/
+├── ...
+├── calibration/
+└── models/</code></pre>
+
+      <p>For instructions about using the dataset please see <span><a href="https://github.com/NVlabs/dex-ycb-toolkit" target="_blank">dex-ycb-toolkit</a></span>.</p>
+      </div>
+
+      <div class="section">
+        <h3>Code</h3>
+        <div class="row content">
+          <div class="center image">
+            <a href="https://github.com/NVlabs/dex-ycb-toolkit" target="_blank">
+              <img src="./assets/GitHub-Mark/PNG/GitHub-Mark-64px.png">
+            </a>
+          </div>
+          <div>
+            <span><a href="https://github.com/NVlabs/dex-ycb-toolkit" target="_blank">dex-ycb-toolkit</a></span>
+            <br>
+            <span>A Python package that provides evaluation and visualization tools for the DexYCB dataset.</span>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      <div class="section">
+        <h3>Video</h3>
+          <div class="embedded-video">
+            <iframe src="https://www.youtube.com/embed/Q4wyBaZeBw0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </div>
+      -->
+
+      <!--
+      <div class="section">
+        <h3>Contact</h3>
+        <p>Send any comments or questions to Yu-Wei Chao: <a href="mailto:ychao@nvidia.com">ychao@nvidia.com</a>.</p>
+      </div>
+      -->
+
+      <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{2024graspnet,
+    title={GraspNet: A Comprehensive Hand-Object Grasp Dataset with All Grasping Taxonomies, Diverse Hand Poses and Shapes, and 3D Annotations},
+    author={Cho, Woojin and Lee, Jihyun and Yi, Minjae and Kim, Minje and Woo, Taeyun and Kim, Donghwan and Ha, Taewook and Lee, Hyokeun and Ryu, Je-Hwan and Woo, Woontack and Kim, Tae-Kyun},
+    booktitle={ECCV},
+    year={2024}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+    </div>
+  </div>
+
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+  
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
