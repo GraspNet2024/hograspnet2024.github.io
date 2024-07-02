@@ -3,9 +3,43 @@
 <head>
 <title>GraspNet: A Comprehensive Hand-Object Grasp Dataset with All Grasping Taxonomies, Diverse Hand Poses and Shapes, and 3D Annotations</title>
 <meta charset="UTF-8">
+<meta name="description" content="DESCRIPTION META TAG">
+<meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+<meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+<meta property="og:url" content="URL OF THE WEBSITE"/>
+<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+<meta property="og:image" content="static/image/your_banner_image.png" />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+<meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+<meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Keywords for your paper to be indexed by-->
+<meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+rel="stylesheet">
+<link rel="stylesheet" href="static/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="static/css/bulma-slider.min.css">
+<link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script defer src="static/js/fontawesome.all.min.js"></script>
+<script src="static/js/bulma-carousel.min.js"></script>
+<script src="static/js/bulma-slider.min.js"></script>
+<script src="static/js/index.js"></script>
+
 <style>
 h2 {
   font-family: 'Rubik', sans-serif;
@@ -152,22 +186,16 @@ code {
         <div class="container">
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-        <h2 class="title is-3">🛠 Learning Formula and Network Architecture</h2>
         <div class="content has-text-justified">
-            <p>
-            Our key observation is that directly modeling the joint distribution of multiple instances imposes high learning complexity due to its combinatorial nature.
-            Thus, we reformulate the two-hand distribution modeling into the modeling of factored single-hand model distribution unconditional and conditional to the other hand, such that
-            \(p_{\phi}(\mathbf{x}_{l}, \mathbf{x}_{r}) = p_{\phi}(\mathbf{x}_{l})\, p_{\phi}(\mathbf{x}_{r} | \mathbf{x}_{l}) \),
-            to reduce the dimensionality of each generation target.
-            After normalizing hand side, we jointly learn the resulting unconditional and conditional distributions via conditioning dropout using a single network.
-
-            </p>
             <div id="results-carousel" class="carousel results-carousel">
             <div class="item item-video1">
-                <img src="data/fig_arch-1.png">
+                <img src="assets/thumbnails.jpg">
             </div>
             <div class="item item-video2">
-                <img src="data/fig_arch-2.png">
+                <img src="assets/DataOrganization.png">
+            </div>
+            <div class="item item-video3">
+                <img src="assets/HardwareSetup.png">
             </div>
             </div>
             </div>
@@ -329,5 +357,24 @@ code {
 
 
 </div>
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+  
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
