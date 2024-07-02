@@ -25,12 +25,6 @@
 
 
   <title>GraspNet</title>
-  <link
-    rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤝</text></svg>"
-  />  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -217,21 +211,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present 🤝<b>InterHandGen</b>, a novel framework that learns the generative
-            prior of two-hand interaction. Sampling from our model yields plausible
-            and diverse two-hand shapes in close interaction with or without an object.
-            Our prior can be incorporated into any optimization or learning methods to
-            reduce ambiguity in an ill-posed setup. Our key observation is that directly modeling the joint
-            distribution of multiple instances imposes high learning complexity due to its combinatorial nature.
-            Thus, we propose to <b>decompose the modeling of joint distribution into the
-            modeling of factored unconditional and conditional single instance distribution</b>.
-            In particular, we introduce a diffusion model that learns the single-hand distribution
-            unconditional and conditional to another hand via conditioning dropout.
-            For sampling, we combine anti-penetration and classifier-free guidance to enable plausible generation.
-            Furthermore, we establish the rigorous evaluation protocol of two-hand synthesis, where our method significantly
-            outperforms baseline generative models in terms of plausibility and diversity.
-            We also demonstrate that our diffusion prior can boost the performance of two-hand reconstruction from
-            monocular in-the-wild images, achieving new state-of-the-art accuracy.
+            Existing datasets for 3D hand-object interaction are limited either in the data cardinality, data variations in interaction scenarios, or the quality of annotations. In this work, we present a comprehensive new training dataset for hand-object interaction called GraspNet. It is the only real dataset that captures full grasp taxonomies, providing grasp annotation and wide intraclass variations. Using grasp taxonomies as atomic actions, their space and time combinatorial can represent complex hand activities around objects. We select 22 rigid objects from the YCB dataset and 8 other compound objects using shape and size taxonomies, ensuring coverage of all hand grasp configurations. The dataset includes diverse hand shapes from 99 participants aged 10 to 74, totaling 1.5M RGB-Depth frames. It offers labels for 3D hand and object meshes, 3D keypoints, contact maps, and \emph{grasp labels}. Accurate hand and object 3D meshes are obtained by fitting the hand parametric model (MANO) and the hand implicit function (HALO) to multi-view RGBD frames, with the MoCap system only for objects. Note that HALO fitting does not require any parameter tuning, enabling scalability to the dataset's size with comparable accuracy to MANO. We evaluate GraspNet on relevant tasks: grasp classification and 3D hand pose estimation. The result shows performance variations based on grasp type and object class, indicating the potential importance of the interaction space captured by our dataset. The provided data aims at learning universal shape priors or foundation models for 3D hand-object interaction.
           </p>
         </div>
       </div>
@@ -406,11 +386,11 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{lee2024interhandgen,
-    title={InterHandGen: Two-Hand Interaction Generation via Cascaded Reverse Diffusion},
-    author={Lee, Jihyun and Saito, Shunsuke and Nam, Giljoo and Sung, Minhyuk and Kim, Tae-Kyun},
-    booktitle={CVPR},
-    year={2024}
+      <pre><code>@inproceedings{2024graspnet,
+        title={GraspNet: A Comprehensive Hand-Object Grasp Dataset with All Grasping Taxonomies, Diverse Hand Poses and Shapes, and 3D Annotations},
+        author={Cho, Woojin and Lee, Jihyun and Yi, Minjae and Kim, Minje and Woo, Taeyun and Kim, Donghwan and Ha, Taewook and Lee, Hyokeun and Ryu, Je-Hwan and Woo, Woontack and Kim, Tae-Kyun},
+        booktitle={ECCV},
+        year={2024}
 }</code></pre>
     </div>
 </section>
